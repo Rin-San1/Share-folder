@@ -1,3 +1,8 @@
+Appname = assingment10
+
+Source += main.c
+Source += meastemp.c
+
 
 all:
-	gcc main.c meastemp.c -lm
+	gcc $(Source) -lm -o $(Appname)
