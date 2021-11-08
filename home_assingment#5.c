@@ -2,27 +2,35 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-bool Check_prime_number (unsigned int arg); /* retun true if digit is prime */
+/* функция возвращает true если число простое */
+bool Check_prime_number (unsigned int arg); 
 
 void main (void) {
 
-	unsigned int N = 0 ; /* quantity Prime digit to print */
-	unsigned int count = 0; /* count prime digit */
-	unsigned int p = 3; /* count of all digit */
-	
-	printf ("Enter number of prime digit to print\n");
-	//scanf ( "%u", &N);
+/* Колличество простых чисел которое надо вывести */
+	int N = 0 ;
 
-/* check entered value correctness. Digit must be positive*/
-	if ((scanf ( "%u", &N)) || N < 0 ) exit(EXIT_FAILURE);
+/*Счетчик для всех чисел*/
+	unsigned int count = 1;
 	
-	while (count < N) {
-		if (Check_prime_number( p )){
-		printf ( "%u\n", p);
+/*Счетчик для простых чисел*/
+	unsigned int p = 0; 
+	
+	printf ("Enter number prime digit to print\n");
+
+/* Проверка правильности ввода числа*/
+	if ( !(scanf ( "%d", &N)) || N < 0 ){
+		printf("Read error\n");	
+		exit(EXIT_FAILURE);
+	}
+	
+	while (p < N) {
+		if (Check_prime_number( count )){
+		printf ( "%u\n", count);
 		++count;
 		++p;
 		}
-		else ++p;
+		else ++count;
 	}
 	exit(EXIT_SUCCESS);
 

@@ -2,17 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* Fill th array "A" random numbers. Range of random numbers is 0-100 */
+/* функция заполняет массив случайными числам. Элементы массива принимают значения 0-100 */
 void get_array (int A[], int N);
 
-/* Sorting from min to max element. I use "Insertion sort" */
+/* функция сортирует по возрастанию. Я использовал алгоритм сортировки вставками*/
 void sort_array (int A[], int N);
 
 void print_array (int A[], int N);
 
 void main (void){
 
-/* "N" is a number of array elements */
+/* "N" количество элементов масива */
 	int N = 0; 
 	
 	printf ( "Enter array elements quantity\n");
@@ -34,7 +34,6 @@ void main (void){
 
 void get_array (int *A, int N){
 
-/*spell from magic shcool "computer_scince"*/
 	srand (time(NULL)); 
 	
 	for(int i=0; i<N; ++i) {

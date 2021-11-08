@@ -2,9 +2,10 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-/* write input to X, Y,R. check correctnes of values */
+/* Функция считывает из потока ввода значения X, Y, R, возвращает true если считано корректно */
 bool get_user_input(float *X, float *Y, float *R);
 
+/* Функция возвращает true, если точка с координатами X, Y принадлежат окружности радиусом R */
 bool is_target_hit(float X, float Y, float R);
 
 void main (void){
