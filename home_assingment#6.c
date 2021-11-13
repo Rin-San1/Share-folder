@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-
-
-
-
-
-
-
-
 void main (void){
 
 	char str;
@@ -16,8 +8,7 @@ void main (void){
 	unsigned int upper_registor = 0; /* number of upper case character */
 	unsigned int lower_registor = 0; /* number of lower case character */
 	unsigned int spaces = 0; /* number of spaces */
-	
-	
+		
 	printf ("Enter symbols\n");
 	
 	while((str = getchar()) != '\n'){

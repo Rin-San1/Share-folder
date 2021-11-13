@@ -12,7 +12,7 @@ int main (void)
 	}
 	P = 2*M_PI*R;
 	S = M_PI*R*R;
-	V = 4/3*M_PI*R*R*R;
+	V = 4/(float)3*M_PI*R*R*R;
 	printf ("Perimetr %5.2f\n Square %5.2f\n Volume %5.2f\n", P, S, V);
 	return 0;
 
